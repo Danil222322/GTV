@@ -14,7 +14,7 @@ anekdots = [
 def index():
     # Выбор случайного анекдота из списка
     random_anekdot = random.choice(anekdots)
-    return render_template('anekdots.html', anekdot=random_anekdot)
+    return render_template('index.html', anekdot=random_anekdot)
 
 if __name__ == '__main__':
     app.run(debug=True)
