@@ -1,11 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Случайный анекдот</title>
+    <title>Рулетка</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <h1>{{ anekdot }}</h1>
+    <div class="shadow"></div>
+	<div class="random">
+		<div class="result"></div>
+		<div class="cards">
+			<div>0</div>
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+			<div>5</div>
+			<div>6</div>
+			<div>7</div>
+			<div>8</div>
+			<div>9</div>
+			<div>10</div>
+			<div>11</div>
+		</div>
+	</div>
+	<button class="start" onclick="start()">Крутити</button>
+    <h1><div id="balance">Баланс: <span id="balanceAmount">400</span> грн</div></h1>
+	<img src="{{ url_for('static', filename='images/870x242_1.jpg') }}" alt="Изображение">
+	<h2><div id="text_info">Якщо випадає число 6 або 10, то баланс збільшується на 60 гривень.</div></h2>
+    <script src="{{ url_for('static', filename='roulette.js') }}"></script>
 </body>
 </html>
+
+
