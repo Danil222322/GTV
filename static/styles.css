@@ -1,1 +1,5 @@
-
+/* styles.css */
+body {
+    background-color: lightblue; /* Изменение цвета фона */
+    color: darkblue; /* Изменение цвета текста */
+}
