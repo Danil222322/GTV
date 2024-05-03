@@ -2,4 +2,5 @@
 body {
     background-color: #00FFFF; /* Измененить цвет фона */
     color: #2F4F4F; /* Изменение цвета текста */
+    text-align: center;
 }
