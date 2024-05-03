@@ -3,16 +3,18 @@ import random
 
 app = Flask(__name__)
 
-# Список случайных слов
-random_words = ['Мир клоунов']
-
+# Список анекдотов
+anekdots = [
+    "Колобок повесился.",
+    "Заяц застрелился.",
+    "Винни-Пух попал в долговую яму."
+]
 
 @app.route('/')
 def index():
-    # Выбор случайного слова из списка
-    random_word = random.choice(random_words)
-    return render_template('index.html', random_word=random_word)
-
+    # Выбор случайного анекдота из списка
+    random_anekdot = random.choice(anekdots)
+    return render_template('anekdots.html', anekdot=random_anekdot)
 
 if __name__ == '__main__':
     app.run(debug=True)
